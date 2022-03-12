@@ -10,7 +10,6 @@ set(CMAKE_POSITION_INDEPENDENT_CODE)
 
 enable_testing()
 
-add_subdirectory(googletest)
 add_subdirectory(simulation)
 add_subdirectory(libExample)
 add_subdirectory(test)

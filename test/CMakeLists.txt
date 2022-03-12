@@ -13,10 +13,13 @@ set(Headers
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 add_executable(${testName} ${Sources} ${Headers})
 target_link_libraries(${testName} PUBLIC
-    gtest_main    
     Example
+    ${CONAN_LIBS}
     )
 
 add_test(
